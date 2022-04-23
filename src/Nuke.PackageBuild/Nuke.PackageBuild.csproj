@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>npb</ToolCommandName>
+        <PackageId>Harrhp.Nuke.PackageBuild</PackageId>
+        <Version>1.0.0-beta.2</Version>
+        <Title>Harrhp.Nuke.PackageBuild</Title>
+        <PackageTags>nuke nuget build</PackageTags>
+        <Description>Tool for publishing nuget packages with nuke</Description>
+        <Authors>prfbszbq</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/harrhp/Nuke.PackageBuild</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NukeTelemetryVersion>1</NukeTelemetryVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="./"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Nuke.Common" Version="$(NukeCommonVersion)" />
+    </ItemGroup>
+</Project>
